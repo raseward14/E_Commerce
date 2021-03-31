@@ -7,29 +7,36 @@ const ProductTag = require('./ProductTag');
 // HINT-- make sure to set up foreign key relationships that match the column we created in the respective models
 
 // Products belongsTo Category
+Product.belongsTo(Category, {
+  foreignKey: 'category_id',
+});
 
 // Categories have many Products
+Category.hasMany(Product, {
+  foreignKey: 'category_id',
+  onDelete: 'CASCADE',
+});
 
-// Products belongToMany Tag (through ProductTag)
+// Products belongToMany Tags (through ProductTag)
 Product.belongsToMany(Tag, {
   // Define the third table needed to store the foreign keys
   through: {
-    model: Trip,
+    model: ProductTag,
     unique: false
   },
   // Define an alias for when data is retrieved
-  as: 'planned_trips'
+  as: 'product_tags'
 });
 
-// Tag belongToMany Product (through ProductTag)
+// Tags belongToMany Products (through ProductTag)
 Tag.belongsToMany(Product, {
   // Define the third table needed to store the foreign keys
   through: {
-    model: Trip,
+    model: ProductTag,
     unique: false
   },
   // Define an alias for when data is retrieved
-  as: 'planned_trips'
+  as: 'tag_data'
 });
 
 module.exports = {
