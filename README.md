@@ -4,11 +4,11 @@
 ## Description
 An e-commerce site utilizing Express.js API and Sequelize to interact with a MySQL database.
 
-This built in command-line application allows the user to add departments, roles, and employees, view departments, roles, and employees, and update employee roles. Click the link below for a video walkthrough.
+This built in command-line application allows a manager at an internet retail company to use a functional Express.js API requiring a database name, MySQL username, and MySQL password to be entered into environment variables, to connet to a database using Sequelize. By entering schema, and seeds commands, a development database is created, and is seeded with test data. The command npm run start runs a package.json script to invoke the application, starting the server and syncing the Sequelize models to the MySQL database. 
 
-**[Check out the video here!](https://drive.google.com/file/d/1-Z7d5IIzcBIHGZ7wPe0pSHVjXTYoZc7j/view)**
+API routes are then tested in Insomnia Core for categroies, tags, and products, returning data in JSON format. API GET POST PUT and DELETE routes allow the user to successfully CREATE, READ, UPDATE, and DELETE data in the database. Click the link below for a video walkthrough.
 
-To control the order the code executes, async & await functions are utilized. The user navigates a list inquirer prompt, sending a response into a switch statemtent that calls one of several asynchronous functions below, each of which has at least one SQL query that returns, deletes, or updates data from the database.
+**[Check out the video here!](https://drive.google.com/file/d/1q1bYzoWYdOZ0YetXsI5ky9tCB3cfT3Os/view)**
 
 ## Table of Contents
 * [Usage](#usage)
@@ -17,16 +17,13 @@ To control the order the code executes, async & await functions are utilized. Th
 
 ## Usage
 * **The Finished Product**  
-![Employee Tracker](assets/images/snapshot.png)
+![E-Commerce](assets/images/snapshot.png)
 
 ## Credits
 Here are a few resources that helped me get this project knocked out!
-* [FIGfont](http://www.jave.de/figlet/figfont.html)
-* [Izweb Technologies](https://www.youtube.com/watch?v=7gKd0MYsSnE)
-* [Figlet example](http://www.figlet.org/examples.html)
-* [MDN Array.prototype.filter()](https://www.youtube.com/watch?v=7gKd0MYsSnE)
-* [MySQL 8.0 Reference Guide](https://dev.mysql.com/doc/refman/8.0/en/sorting-rows.html)
-* [w3schools includes() method](https://www.w3schools.com/jsref/jsref_includes.asp)
+* [dotenv](https://www.npmjs.com/package/dotenv)
+* [MySQL2](https://www.npmjs.com/package/mysql2)
+* [Sequelize](https://www.npmjs.com/package/sequelize)
 
 ## License
 * Link for more information: (https://opensource.org/licenses/MIT)
